@@ -99,11 +99,11 @@ Desktop/
     - 1 Takes the version of the file as it exists in the head commit, the front of the current branch, and puts it in the working directory, overwriting the version of the file that's already there if there is one. The new version of the file is not staged.
     - 2 Takes the version of the file as it exists in the commit with the given id, and puts it in the working directory, overwriting the version of the file that's already there if there is one. The new version of the file is not staged. **Note: one can provide a unique [commit id] instead of the 40 character id printed in logs.*
     - 3 Takes all files in the commit at the head of the given branch, and puts them in the working directory, overwriting the versions of the files that are already there if they exist. Also, at the end of this command, the given branch will now be considered the current branch (HEAD). Any files that are tracked in the current branch but are not present in the checked-out branch are deleted. The staging area is cleared, unless the checked-out branch is the current branch.
-###branch 
+### branch 
   - Usage: `./glet branch [branch name]`
     - e.g. `./glet branch bandersnatch`
   - Description: Creates a new branch with the given name, and points it at the current head node. This command does NOT immediately switch to the newly created branch (just as in real Git).
-###rm-branch 
+### rm-branch 
   - Usage: `./glet rm-branch [branch name]`
     - e.g. `./glet rm-branch bandersnatch`
   - Deletes the branch with the given name. This only means to delete the pointer associated with the branch.
