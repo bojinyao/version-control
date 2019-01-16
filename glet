@@ -1,0 +1,18 @@
+#!/bin/bash
+class_files="Branch Commit GitletException Main Stage Utils"
+
+for name in $class_files;
+do 
+    if [ ! -e gitlet/"$name".class ];
+    then 
+        command -v make >/dev/null 2>&1 || { 
+            printf >&2 "Program requires \"make\" but it's not installed. Aborting.\nTo install \"make\" on MacOS, open Terminal and run: \"xcode-select --install\" \n"; 
+            exit 1; 
+        }
+        (cd gitlet && make)
+        break
+    fi 
+done
+
+java gitlet.Main "$@"
+
