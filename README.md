@@ -16,6 +16,7 @@ project spec link: [Gitlet](https://inst.eecs.berkeley.edu/~cs61b/fa17/materials
 - [rm-branch](#rm-branch)
 - [reset](#reset)
 - [merge](#merge)
+- [delete gitlet](#delete-gitlet)
 
 ### NOTE: 
 - **This version control system can ONLY track *.txt* files!**
@@ -122,3 +123,7 @@ Desktop/
     contents of file in given branch
     >>>>>>>
   ```
+### delete gitlet
+- Usage: `./glet delete gitlet`
+- Description: Delete the hidden file `.gitlet` from working directory. This will erase all gitlet history within this working directory. In git, this is similar to removing `.git` directory.
+
